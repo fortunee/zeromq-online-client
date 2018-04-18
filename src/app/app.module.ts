@@ -9,6 +9,7 @@ import { AddressFieldComponent } from './components/shared/address-field/address
 import { MessageFieldComponent } from './components/shared/message-field/message-field.component';
 import { ButtonComponent } from './components/shared/button/button.component';
 import { PipelineOptionComponent } from './components/shared/pipeline-option/pipeline-option.component';
+import { EmitComponent } from './components/emit/emit.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { PipelineOptionComponent } from './components/shared/pipeline-option/pip
     AddressFieldComponent,
     MessageFieldComponent,
     ButtonComponent,
-    PipelineOptionComponent
+    PipelineOptionComponent,
+    EmitComponent
   ],
   imports: [
     BrowserModule
