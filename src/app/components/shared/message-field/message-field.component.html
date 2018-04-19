@@ -1,3 +1,10 @@
-<p>
-  message-field works!
-</p>
+<div class="form-group">
+  <ngx-codemirror 
+  [(ngModel)]="content" 
+  [options]="{
+    lineNumbers: true,
+    theme: 'monokai',
+    mode: 'javascript'
+  }"
+></ngx-codemirror>
+</div>
