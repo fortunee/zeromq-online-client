@@ -13,6 +13,7 @@ import { MessageFieldComponent } from './components/shared/message-field/message
 import { ButtonComponent } from './components/shared/button/button.component';
 import { PipelineOptionComponent } from './components/shared/pipeline-option/pipeline-option.component';
 import { EmitComponent } from './components/emit/emit.component';
+import { ListenComponent } from './components/listen/listen.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import { EmitComponent } from './components/emit/emit.component';
     MessageFieldComponent,
     ButtonComponent,
     PipelineOptionComponent,
-    EmitComponent
+    EmitComponent,
+    ListenComponent
   ],
   imports: [
     BrowserModule,
