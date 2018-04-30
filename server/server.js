@@ -21,11 +21,11 @@ app.use((req, res, next) => {
 
 routes(router);
 
-app.get('api/*', (req, res) => {
+app.use('/api', router);
+
+app.get('/api/*', (req, res) => {
   res.send({ message: 'Man! you calling the wrong API endpoint' });
 });
-
-app.use('/api', router);
 
 const port = process.env.PORT || 8001;
 
