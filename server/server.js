@@ -2,7 +2,11 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import { log } from 'util';
 
+import routes from './routes';
+
 const app = express();
+const router = express.Router();
+
 app.use(bodyParser());
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -15,9 +19,13 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('*', (req, res) => {
+routes(router);
+
+app.get('api/*', (req, res) => {
   res.send({ message: 'Man! you calling the wrong API endpoint' });
 });
+
+app.use('/api', router);
 
 const port = process.env.PORT || 8001;
 
